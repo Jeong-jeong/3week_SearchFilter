@@ -1,6 +1,6 @@
 import * as S from './Style';
 import { ItemBrandBtn, Input, ResetBtn } from '@components/base';
-import { Dispatch, SetStateAction, useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 
 interface HeaderPops {
   userSelect: boolean;

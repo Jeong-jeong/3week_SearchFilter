@@ -9,12 +9,14 @@ interface PaginationWrapperProps {
 }
 
 const PaginationWrapper = ({ list }: PaginationWrapperProps) => {
+  if (!list) return;
+
   const POST_PER_PAGE = 6; // @NOTE: 한 페이지당 보여줄 포스트 수
   const [currentIndex, setCurrentIndex] = useState(1); // @NOTE: 누를 때마다 변화하는 값
   const [groupPages, setGroupPages] = useState(
     Math.floor(currentIndex / POST_PER_PAGE) + 1
   );
-  const totalGroupPages = Math.floor(list!.length / POST_PER_PAGE);
+  const totalGroupPages = Math.floor(list?.length / POST_PER_PAGE);
 
   const offset = (currentIndex - 1) * POST_PER_PAGE;
 
@@ -35,7 +37,7 @@ const PaginationWrapper = ({ list }: PaginationWrapperProps) => {
         )}
       </S.MainBoxWrapper>
       <Pagination
-        totalPages={list!.length}
+        totalPages={list?.length}
         // totalPages={37}
         totalGroupPages={totalGroupPages}
         groupPages={groupPages}

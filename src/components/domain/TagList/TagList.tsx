@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import * as S from './Style';
 import { Tag } from '@components/base';
 import { IMockData } from '@types';

@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
-type PromiseFn<T> = (...args: any) => Promise<T>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type PromiseFn<T> = (...args: any[]) => Promise<T>;
 
 type ResponseType<T> = {
   isLoading: boolean;
